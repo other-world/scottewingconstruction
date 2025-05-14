@@ -1,0 +1,70 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+import { Image } from "astro:assets";
+import ScottEwingConstructionHero from "../images/scottEwingConstructionHero.webp";
+import home1 from "../images/pexels-pixabay-209266.jpg";
+import home2 from "../images/pexels-bidvine-517980-1249611.jpg";
+import home3 from "../images/pexels-pixabay-358636.jpg";
+
+
+import "../styles/global.css";
+
+const pageTitle = "Scott Ewing Construction";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<Header />
+
+		<section class="rightImage">
+			<Image
+				src={home1}
+				alt="Home"
+				width="400"
+			/>
+			<div class="highlights">
+				<h2>Lorem ipsum, </h2>
+				<p>Dolor sit amet consectetur adipisicing elit. Corporis, fugiat necessitatibus porro, illo in accusantium assumenda ullam saepe iste incidunt neque expedita officiis cumque eum ipsum reprehenderit error quasi? Totam.</p>
+			</div>
+		</section>
+
+		<section class="leftImage">
+				<Image
+				src={home2}
+				alt="Home"
+				width="400"
+			/>
+			<div class="highlights">
+				<h2>Lorem ipsum, </h2>
+				<p>Dolor sit amet consectetur adipisicing elit. Corporis, fugiat necessitatibus porro, illo in accusantium assumenda ullam saepe iste incidunt neque expedita officiis cumque eum ipsum reprehenderit error quasi? Totam.</p>
+			</div>
+		</section>
+
+		<section class="rightImage">
+				<Image
+				src={home3}
+				alt="Home"
+				width="400"
+			/>
+			<div class="highlights">
+				<h2>Lorem ipsum, </h2>
+				<p>Dolor sit amet consectetur adipisicing elit. Corporis, fugiat necessitatibus porro, illo in accusantium assumenda ullam saepe iste incidunt neque expedita officiis cumque eum ipsum reprehenderit error quasi? Totam.</p>
+			</div>
+		</section>
+
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
+	</body>
+</html>
+
