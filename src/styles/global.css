@@ -15,8 +15,9 @@
     --accent2: #f1efbc;
     --accent3: #97a9ae;
 
-    --font1: black;
+    --font1: rgba(40, 40, 40, 0.908);
     --font2: white;
+    --font-nav-hover: #292e58;
 
     --borders: grey;
 
@@ -49,18 +50,22 @@ header {
 
 nav {
     background-color: var(--accent2);
-    margin: 1rem;
+    border-radius: 20px;
 }
 
 /* nav styles */
 .hamburger {
-    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
     padding: 15px 15px 0px 15px;
     cursor: pointer;
+    background-color: var(--accent2);
+    border-radius: 20px;
 }
   
   .hamburger .line {
     display: block;
+    align-items: center;
     width: 50px;
     height: 7px;
     margin-bottom: 15px;
@@ -70,6 +75,7 @@ nav {
 .nav-links {
     margin: 0;
     display:none;
+
 }
   
 .nav-links a {
@@ -79,21 +85,28 @@ nav {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: black;
+    color: var(--font1);
+    background-color: var(--accent2);
     margin: .75rem
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    color: var(--accent1);
+    color: var(--font-nav-hover);
 }
 
 .nav-links a:active {
     color: var(--accent3);
 }
 
+.nav-links .expanded {
+    background-color: var(--accent2);
+
+}
+
 .expanded {
-display: unset;
+    display: unset;
+    background-color: var(--accent2);
 } 
 
 h1 {
@@ -115,7 +128,7 @@ position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-height: 80vh;
+  max-height: 75vh;
   display: flex;
   align-items: start;
   justify-content: center;
@@ -130,7 +143,6 @@ position: relative;
   border-radius: 10px;
   max-width: 90%;
 }
-
 
 .grid-list {
 display: grid;
@@ -203,9 +215,7 @@ footer li {
     nav {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        border-radius: 25px;
-
+        justify-content: space-around;
     }
     .hamburger{
         display: none;
@@ -214,14 +224,14 @@ footer li {
         background-color: var(--accent2);
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
         min-width: 320px;
-        border-left:  0px;
+        border-radius: 25px;
+
     }
   
     .nav-links a {
         display: inline-block;
-        padding: 15px 20px;
+        padding: 5px 20px;
     }
     
     .leftImage {
